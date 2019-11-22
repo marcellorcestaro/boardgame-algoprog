@@ -157,9 +157,9 @@ a) AB-
 b) A
 c) B
 d) O-
-R: a
+R: d
 
-Q: Qual o elemento em Python que permite adicionar um item numa lista?
+Q: Qual o elemento em Python que permite adicionar um item no final de uma lista?
 a) .append
 b) .extension
 c) .add
