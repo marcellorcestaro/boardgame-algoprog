@@ -1,0 +1,167 @@
+Q: Qual foi a primeira linguagem de alto nível criada?
+a) Ada
+b) C
+c) Pascal
+d) Fortran
+R: d
+
+Q: No que se inspirou o criador da linguagem Python para nomeá-la?
+a) Na área de jogos
+b) No mundo dos Répteis
+c) No mundo do cinema
+d) Em alguma música
+R: c
+
+Q: Qual foi o regime implementado no Brasil pela Coroa Portuguesa, responsável por "dividir" o país em faixas:
+a) Cidadanias Hereditárias
+b) Capitanias Hereditárias
+c) Capitanias Patriarcais
+d) Capitanias de Herança
+R: b
+
+Q: Quais foram os países envolvidos num período histórico denominado "Guerra Fria"?
+a) EUA x Coreia do Sul
+b) EUA x Rússia
+c) Russia x Coreia do Norte
+d) URSS x EUA
+R: d
+
+Q: Como se chama a principal tabela abordada em química?
+a) Tabela Química
+b) Tabela Aperiódica
+c) Tabela dos Elementos
+d) Tabela Periódica
+R: d
+
+Q: Qual das práticas abaixo da Idade Média resultou na química que conhecemos hoje em dia?
+a) Inquisição
+b) Alquimia
+c) Magia
+d) Nenhuma das anteriores
+R: b
+
+Q: Quais são os principais tipos de clima no brasil?
+a) Tropical, Sazonal, Ártico e Mezonal.
+b) Polar, Tropical, Equatorial e Semiárido.
+c) Equatorial, Subtropical, Temperado e Sazonal.
+d) Equatorial, Tropical, Tropical de Altitudes e Semiárido.
+R: d
+
+Q: Qual das siglas abaixo representa o estado de Mato Grosso do Sul?
+a) MT
+b) MG
+c) MA
+d) MS
+R: d
+
+Q: Qual dia foi proclamada a república no brasil?
+a) 7 de setembro
+b) 15 de novembro
+c) 20 de agosto
+d) 4 de janeiro
+R: b
+
+Q: O que mede a escala Mercalli?
+a) Intensidade da temperatura
+b) Intensidade do som
+c) Purificação do ar
+d) Intensidade sísmica
+R: d
+
+Q: Em qual região se localiza Sobral?
+a) Norte
+b) Nordeste
+c) Sudeste
+d) Centro-Oeste
+R: b
+
+Q: A estátua da Liberdade foi um presente dado aos EUA pelo(a):
+a) Alemanha
+b) França
+c) Itália
+d) Japão
+R: b
+
+Q: Qual dos problemas matemáticos abaixo já foi solucionado?
+a) Conjectura de Poincaré
+b) A hipótese de Riemann
+c) Equações de Yang Mills
+d) Os números Ramsey
+R: a
+
+Q: Qual das opções abaixo não existe no escopo de JavaScript?
+a) Node.js
+b) React.js
+c) Vue.js
+d) Nactare.js
+R: d
+
+Q: O termo responsividade da perspectiva "Desenvolvimento Web" significa:
+a) Fazer com que os formulários de um site estejam estruturados com o respectivo back-end.
+b) Uma técnica CSS que adapta as páginas de um site ao tamanho das diversas telas existentes.
+c) Uma função implementada no código que acarreta num processo de repetição até uma condição ser satisfeita.
+d) Estilizar o site com elementos personalizáveis, colocando cores, fontes diferentes, bordas, entre outros.
+R: b
+
+Q: Qual o componente dentro da UCP que determina o tamanho máximo da palavra que cabe dentro do processador?
+a) MAR
+b) MBR
+c) IR
+d) PC
+R: b
+
+Q: Quais as classificações de barramento quanto ao tipo de informação?
+a) Controle, dados, endereço
+b) Comunicação, dados, caminho
+c) Não há barramentos para informações
+d) Serial, paralelo, híbrido
+R: a
+
+Q: Qual dos algorítimos abaixo fornece um caminho de custo mínimo num grafo com arestas de peso não negativo?
+a) Algorítimo de Dijkstra
+b) Algorítimo de Huffman
+c) Algorítimo de Plank
+d) Algorítimo de Euler
+R: a
+
+Q: A ditadura militar teve seu início em:
+a) 10 de abril de 1964
+b) 31 de março de 1964
+c) 15 de maio de 1985
+d) 20 de maio de 1962
+R: b
+
+Q: “Este é um pequeno passo para o homem, mas um grande salto para a humanidade”. Essa frase foi dita pelo(a):
+a) Neil Armstrong, primeiro homem a pisar na lua, em 20 de julho de 1969.
+b) Barack Obama, no dia de sua posse com presidente dos EUA, em 20 de janeiro de 2009.
+c) Martin Luther King, em um de seus discursos como ativista político, em 1964.
+d) Princesa Isabel, ao assinar a lei áurea em 13 de maio de 1888.
+R: a
+
+Q: Do que é feito o Diamante?
+a) Cobre
+b) Carbono
+c) Grafite
+d) Iodo
+R: b
+
+Q: O ser humano pode ser classificado em qual dos reinos abaixo?
+a) Reino Monera
+b) Reino Protista
+c) Reino Animalia
+d) Reino Fungi 
+R: c
+
+Q: Qual tipo sanguíneo é considerado "doador universal"?
+a) AB-
+b) A
+c) B
+d) O-
+R: a
+
+Q: Qual o elemento em Python que permite adicionar um item numa lista?
+a) .append
+b) .extension
+c) .add
+d) .insert
+R: a
