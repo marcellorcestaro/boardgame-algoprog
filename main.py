@@ -1,5 +1,5 @@
 import random
-
+import sys
 class Questao: 
 
     questoes = []
@@ -33,7 +33,7 @@ class Questao:
 
         resp_usuario = input("R: ")
 
-        if resp_usuario == self.resp:
+        if resp_usuario.lower() == self.resp:
             print('Correto!\n')
             return True
         else: 
@@ -66,17 +66,20 @@ class Tabuleiro:
     def mostrar(self):
         for i in range(len(self.tabuleiro)):
             if self.jogadorUm.posicao == i and self.jogadorDois.posicao == i:
-                print('['+self.jogadorUm.simbolo+self.jogadorDois.simbolo+']', end="")
+                print(' |{'+self.jogadorUm.simbolo+' '+self.jogadorDois.simbolo+'}| ', end="")
             elif self.jogadorUm.posicao == i:
-                print('['+self.jogadorUm.simbolo+']', end="")
+                print(' |{'+self.jogadorUm.simbolo+'}| ', end="")
             elif self.jogadorDois.posicao == i:
-                print('['+self.jogadorDois.simbolo+']', end="")
+                print(' |{'+self.jogadorDois.simbolo+'}| ', end="")
             else:
-                print('[ ]', end="")
+                print('  |{ }|  ', end="")
+
+
         print('\n')
 
+questoes = []
+
 with open("perguntas.txt", mode="r", encoding="utf8") as f:
-    questoes = []
     indice = 0
     questoes.insert(indice, Questao('teste', 'teste', 'teste', 'teste', 'teste', 'teste'))
     for line in f:
@@ -100,6 +103,8 @@ with open("perguntas.txt", mode="r", encoding="utf8") as f:
 
 print("Quantidade de questões carregadas:", len(questoes))
 
+questoes_bckup = questoes
+
 print('*~'*30)
 print('TRIVIA - JOGO DE TABULEIRO (versão Python!)')
 print('*~'*30)
@@ -107,7 +112,7 @@ print('*~'*30)
 print('\nRegras do jogo:')
 print('\t- Este jogo é para dois jogadores')
 print('\t- A cada turno, o jogador vai precisar responder uma pergunta para que depois possa se mover')
-print('\t- Existem três casas: Neutra, Avanço e Retrocesso')
+print('\t- Após avançar, você pode cair em três diferentes casas, com diferentes efeitos: Neutra, Avanço e Retrocesso')
 print('\t\t- Neutra: não há movimento')
 print('\t\t- Avanço: o jogador responde a pergunta. Se acertar, avançará mais algumas casas. Se não, se mantém parado')
 print('\t\t- Retrocesso: o jogador responde a pergunta. Se acertar, se mantém parado. Se não, retrocede algumas casas.')
@@ -118,33 +123,53 @@ while resp != '1':
     print('Está pronto(a) para jogar?')
     resp = input('1) Sim\n2) Não\nR: ')
 
-simUm = input('Qual o símbolo do jogador 1? (usar somente letras ou números unitários, sem frases)')
-simDois = input('Qual o símbolo do jogador 2? (usar somente letras ou números unitários, sem frases)')
+simUm = input('Qual o símbolo do jogador 1? (usar somente letras ou números unitários, sem frases) \nR: ')
+simDois = input('Qual o símbolo do jogador 2? (usar somente letras ou números unitários, sem frases) \nR: ')
 
 jogadorUm = Jogador(simUm, 1)
 jogadorDois = Jogador(simDois, 2)
 
 tabuleiro = Tabuleiro(22, jogadorUm, jogadorDois)
 
-def casaFinal(player):
+def casaFinal(player, avanco):
+    tabuleiro.mostrar()
+
     print("Parabéns, jogador {}! Você está na reta final. Responda a próxima questão para ver se você conseguiu vencer desta vez!".format(player.indice))
     if escolherQuestao(questoes).fazerPergunta():
         print('*~'*30)
         print("Você venceu, jogador {}!! Parabéns!!!".format(player.indice))
+        print('*~'*30)
+        print("\nEspero que tenham gostado do jogo! :)")
+        print("Créditos:\n\tFrancielly Ortiz\n\tJoão Victor Morais\n\tMarcello Cestaro")
+        fim()
     else: 
-        print("Vish, você errou! Continue no mesmo lugar :(")
+        print("Vish, você errou! Volte para o lugar anterior! :(")
+        player.posicao -= avanco
         if player.indice == 1: 
             turno(2)
         else:
             turno(1)
 
+def fim():
+    sys.exit()
+
 def escolherQuestao(vetor):
-    return random.choice(vetor)
+
+    tam_vetor = len(vetor)
+    indice = random.randint(0, tam_vetor - 1)
+
+    if tam_vetor <= 0: 
+        questoes = questoes_bckup
+
+    elemento = vetor[indice]
+    del vetor[indice]
+
+    return elemento
 
 def somenteMover(player, casas):
     if player.posicao + casas >= tabuleiro.tamanho - 1:
         player.posicao = tabuleiro.tamanho - 1
-        casaFinal(player)
+        casaFinal(player, casas)
     elif player.posicao + casas < 0:
         player.posicao = 0
     else: 
@@ -185,6 +210,8 @@ def casaRetro(player):
     else: 
         res = random.randint(1, 6)
         print('Você errou! Volte {} casas!'.format(res))
+        volta = res * -1
+        somenteMover(player, volta)
         if player.indice == 1: 
             turno(2)
         else:
@@ -201,7 +228,7 @@ def casaNeutra(player):
 def mover(casas, player, tabuleiro):
     if player.posicao + casas >= tabuleiro.tamanho - 1:
         player.posicao = tabuleiro.tamanho - 1 
-        casaFinal(player)
+        casaFinal(player, casas)
     elif player.posicao + casas < 0:
         player.posicao = 0
     else: 

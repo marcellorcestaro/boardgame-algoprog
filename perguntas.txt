@@ -165,3 +165,52 @@ b) .extension
 c) .add
 d) .insert
 R: a
+
+Q: Qual é a maior floresta do planeta?
+a) Negra
+b) De Sherwood
+c) Da Tijuca
+d) Amazônica
+R: d
+
+Q: Qual destes órgãos não faz parte do sistema digestivo?
+a) Brônquios
+b) Bocas
+c) Faringe
+d) Intestino
+R: a
+
+Q: Quantos espaços tem no Jogo da Velha?
+a) Seis
+b) Sete
+c) Oito
+d) Nove
+R: d
+
+Q: Qual é o material usado para fazer a borracha?
+a) Durex
+b) Látex
+c) Pirex
+d) Xérox
+R: b
+
+Q: Qual presidente brasileiro renunciou em 1992?
+a) Itamar Franco
+b) Fernando Collor
+c) José Sarney
+d) Figueiredo
+R: b
+
+Q: Qual destas palavras é sinônimo de equívoco?
+a) Acerto
+b) Equitação
+c) Engano
+d) Cavalo
+R: c
+
+Q: Os bairros mais afastados do centro da cidade chamam-se:
+a) Residenciais
+b) Comerciais
+c) Suburbanos
+d) Industriais
+R: c
