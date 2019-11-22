@@ -75,7 +75,7 @@ class Tabuleiro:
                 print('[ ]', end="")
         print('\n')
 
-with open("perguntas.txt") as f:
+with open("perguntas.txt", mode="r", encoding="utf8") as f:
     questoes = []
     indice = 0
     questoes.insert(indice, Questao('teste', 'teste', 'teste', 'teste', 'teste', 'teste'))
